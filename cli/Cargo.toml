@@ -22,7 +22,7 @@ question = "0.2.2"
 itertools = "0.14.0"
 # libpassgen = "1.0.3"
 # libpassgen = { git = "https://github.com/Antidote1911/libpassgen", branch = "master" }
-libpassgen = { path = "../libpassgen" }
+passgencore = { path = "../passgencore" }
 zxcvbn = "3.1.0"
 
 [target.'cfg(windows)'.dependencies]

@@ -1,7 +1,7 @@
 use crate::config::Config;
 
 use clap::Parser;
-use libpassgen::Pool;
+use passgencore::Pool;
 
 #[derive(Parser, Debug)]
 #[clap(

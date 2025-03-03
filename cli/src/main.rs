@@ -1,7 +1,7 @@
 use crate::cli::Cli;
 use crate::config::Config;
 use clap::Parser;
-use libpassgen::generate_n_passwords;
+use passgencore::generate_n_passwords;
 extern crate zxcvbn;
 use zxcvbn::zxcvbn;
 use std::{fs::File, io::LineWriter, io::Write};

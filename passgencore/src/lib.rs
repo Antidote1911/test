@@ -1,6 +1,6 @@
-//! # libpassgen
+//! # passgencore
 //!
-//! `libpassgen` crate for generating randoms passwords
+//! `passgencore` crate for generating randoms passwords
 
 use indexmap::set::Iter;
 use indexmap::IndexSet;

@@ -9,4 +9,4 @@ name = "passgen_adapter"
 crate-type = ["staticlib"]
 
 [dependencies]
-libpassgen = { path = "../libpassgen" }
+passgencore = { path = "../passgencore" }

@@ -1,7 +1,7 @@
 use std::ffi::{CStr, CString};
 use std::os::raw::c_char;
 use std::ptr::null_mut;
-use libpassgen::{generate_password, getversion, Pool};
+use passgencore::{generate_password, getversion, Pool};
 
 #[no_mangle]
 pub extern "C" fn get_version() -> *mut c_char {
