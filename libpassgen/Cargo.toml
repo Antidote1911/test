@@ -1,0 +1,17 @@
+[package]
+name = "libpassgen"
+version = "1.0.3"
+license = "MIT OR Apache-2.0"
+description = "Library for generating passwords"
+authors = ["Fabrice Corraire <antidote1911@gmail.com>"]
+keywords = ["random", "password", "generator"]
+homepage = "https://github.com/Antidote1911/libpassgen"
+repository = "https://github.com/Antidote1911/libpassgen"
+edition = "2021"
+
+[dependencies]
+rand = "0.9.0"
+rand_seeder = "0.4.0"
+rand_isaac = "0.4.0"
+rand_hc = "0.4.0"
+indexmap = "2.7.1"
