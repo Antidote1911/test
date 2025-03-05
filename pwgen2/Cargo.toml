@@ -1,0 +1,32 @@
+[package]
+name = "pwgen2"
+version = "0.4.0"
+edition = "2021"
+authors = ["Nicolas Embriz <nbari@tequila.io>"]
+description = "password generator"
+documentation = "https://docs.rs/nbari/latest/pwgen2/"
+homepage = "https://docs.io/pwgen2"
+repository = "https://github.com/nbari/pwgen2/"
+readme = "README.md"
+keywords = ["password", "generator", "hash", "security"]
+categories = ["command-line-utilities", "command-line-interface"]
+license = "BSD-3-Clause"
+
+[dependencies]
+anyhow = "1"
+clap = "4.5"
+rand = "0.9"
+openssl = { version = "0.10", optional = true, features = ["vendored"] }
+tokio = { version = "1.43.0", features = ["full"] }
+bcrypt = "0.17"
+pbkdf2 = { version = "0.12", features = ["password-hash", "simple", "std"] }
+sha-crypt = { version = "0.5", features = ["simple"] }
+
+[dev-dependencies]
+assert_cmd = "2.0"
+predicates = "3.1"
+
+[package.metadata.generate-rpm]
+assets = [
+    { source = "target/release/pwgen2", dest = "/usr/bin/pwgen2", mode = "0755" },
+]
