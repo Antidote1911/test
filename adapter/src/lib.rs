@@ -15,6 +15,16 @@ pub extern "C" fn get_random(length: u8,) -> *mut c_char {
     rust_to_c_string(password)
 }
 
+#[no_mangle]
+pub extern "C" fn get_shuffle(length: u8, pool: *mut c_char) -> *mut c_char {
+    let test=c_to_rust_string(pool).unwrap();
+
+    let pool: Pool = test.parse().unwrap();
+    let password = generate_password(&pool, length as usize);
+    rust_to_c_string(password.to_string())
+
+}
+
 fn rust_to_c_string(s: String) -> *mut c_char {
     CString::new(s).unwrap().into_raw()
 }
